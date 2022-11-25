@@ -1,0 +1,3 @@
+当前logging包只支持linux平台。
+
+若需要再windows平台使用，请安装pywin32包，如：pip install pywin32

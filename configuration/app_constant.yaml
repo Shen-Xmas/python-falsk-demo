@@ -1,0 +1,127 @@
+development:
+  # SQLAlchemy 堆栈告警
+  SQLALCHEMY_TRACK_MODIFICATIONS: True
+  # 数据库连接池的大小。默认是数据库引擎的默认值 （通常是 5）。
+  SQLALCHEMY_POOL_SIZE: 500
+  # 控制在连接池达到最大值后可以创建的连接数。当这些额外的 连接回收到连接池后将会被断开和抛弃。
+  SQLALCHEMY_MAX_OVERFLOW: 100
+  # 连接前先ping
+  SQLALCHEMY_POOL_PRE_PING: True
+  # 自动回收连接的秒数。这对 MySQL 是必须的，默认 情况下 MySQL 会自动移除闲置 8 小时或者以上的连接。
+  # 需要注意地是如果使用 MySQL 的话， Flask-SQLAlchemy 会自动地设置这个值为 2 小时。设置-1为不回收
+  SQLALCHEMY_POOL_RECYCLE: 7200
+  # json格式化输出
+  JSONIFY_PRETTYPRINT_REGULAR: True
+  # 支持中文输出
+  JSON_AS_ASCII: True
+  # json消息类型
+  JSONIFY_MIMETYPE: "application/json"
+  # 默认情况下 Flask 按照 JSON 对象的键的顺序来序来序列化它。
+  # 这样做是为了确保键的顺序不会受到字典的哈希种子的影响，从而返回的值每次都是一致的，不会造成无用的额外 HTTP 缓存。
+  # 你可以通过修改这个配置的值来覆盖默认的操作。但这是不被推荐的做法因为这个默认的行为可能会给你在性能的代价上带来改善。
+  #JSON_SORT_KEYS: True
+  # 本地默认语种
+  BABEL_DEFAULT_LOCALE: ""
+  SESSION_TYPE: "redis"
+  # 在cookies中存放session加密字符串的名字
+  SESSION_COOKIE_NAME: "session"
+  # 是否对发送到浏览器上session的cookie值进行加密
+  SESSION_USE_SIGNER: True
+  # 保存到session中的值的前缀
+  SESSION_KEY_PREFIX: "session:"
+  # 控制 cookie 是否应被设置安全标志
+  #SESSION_COOKIE_SECURE: False
+  # 这个标志控制永久会话如何刷新
+  #SESSION_REFRESH_EACH_REQUEST: True
+  # 是否加载解释模板
+  #EXPLAIN_TEMPLATE_LOADING: False
+  # 控制 cookie 是否应被设置 httponly 的标志
+  #SESSION_COOKIE_HTTPONLY: True
+  # cookies的路径
+  #SESSION_COOKIE_PATH: None
+  # 在哪个域名下会产生session记录在cookies中
+  #SESSION_COOKIE_DOMAIN: None
+  # 缓存控制的最大期限, 单位：hour，默认12小时
+  #SEND_FILE_MAX_AGE_DEFAULT: 12
+  # 如果设置为字节数， Flask 会拒绝内容长度大于此值的请求进入，并返回一个 413 状态码
+  #MAX_CONTENT_LENGTH: None
+  # 如果这个值被设置为 True ，Flask不会执行 HTTP 异常的错误处理，而是像对待其它异常一样
+  # 通过异常栈让它冒泡地抛出。这对于需要找出 HTTP 异常源头的可怕调试情形是有用的。
+  #TRAP_BAD_REQUEST_ERRORS: False
+  # Werkzeug 处理请求中的特定数据的内部数据结构会抛出同样也是“错误的请求”异常的特殊的 key errors 。
+  # 同样地，为了保持一致，许多操作可以显式地抛出 BadRequest 异常。
+  # 因为在调试中，你希望准确地找出异常的原因，这个设置用于在这些情形下调试。
+  #TRAP_HTTP_EXCEPTIONS: False
+  # 生成URL的时候如果没有可用的 URL 模式话将使用这个值
+  #PREFERRED_URL_SCHEME: "https"
+  # 是否弃用 x_sendfile
+  #USE_X_SENDFILE: False
+  # 模板自动重新加载
+  # TEMPLATES_AUTO_RELOAD: None
+  # Auth认证token的有效时长，单位秒
+  #TOKEN_EXP: 3600
+
+
+
+production:
+  # SQLAlchemy 堆栈告警
+  SQLALCHEMY_TRACK_MODIFICATIONS: True
+  # 数据库连接池的大小。默认是数据库引擎的默认值 （通常是 5）。
+  SQLALCHEMY_POOL_SIZE: 500
+  # 控制在连接池达到最大值后可以创建的连接数。当这些额外的 连接回收到连接池后将会被断开和抛弃。
+  SQLALCHEMY_MAX_OVERFLOW: 100
+  # 连接前先ping
+  SQLALCHEMY_POOL_PRE_PING: True
+  # 自动回收连接的秒数。这对 MySQL 是必须的，默认 情况下 MySQL 会自动移除闲置 8 小时或者以上的连接。
+  # 需要注意地是如果使用 MySQL 的话， Flask-SQLAlchemy 会自动地设置这个值为 2 小时。设置-1为不回收
+  SQLALCHEMY_POOL_RECYCLE: 7200
+  # json格式化输出
+  JSONIFY_PRETTYPRINT_REGULAR: True
+  # 支持中文输出
+  JSON_AS_ASCII: True
+  # json消息类型
+  JSONIFY_MIMETYPE: "application/json"
+  # 默认情况下 Flask 按照 JSON 对象的键的顺序来序来序列化它。
+  # 这样做是为了确保键的顺序不会受到字典的哈希种子的影响，从而返回的值每次都是一致的，不会造成无用的额外 HTTP 缓存。
+  # 你可以通过修改这个配置的值来覆盖默认的操作。但这是不被推荐的做法因为这个默认的行为可能会给你在性能的代价上带来改善。
+  #JSON_SORT_KEYS: True
+  # 本地默认语种
+  BABEL_DEFAULT_LOCALE: ""
+  SESSION_TYPE: "redis"
+  # 在cookies中存放session加密字符串的名字
+  SESSION_COOKIE_NAME: "session"
+  # 是否对发送到浏览器上session的cookie值进行加密
+  SESSION_USE_SIGNER: True
+  # 保存到session中的值的前缀
+  SESSION_KEY_PREFIX: "session:"
+  # 控制 cookie 是否应被设置安全标志
+  #SESSION_COOKIE_SECURE: False
+  # 这个标志控制永久会话如何刷新
+  #SESSION_REFRESH_EACH_REQUEST: True
+  # 是否加载解释模板
+  #EXPLAIN_TEMPLATE_LOADING: False
+  # 控制 cookie 是否应被设置 httponly 的标志
+  #SESSION_COOKIE_HTTPONLY: True
+  # cookies的路径
+  #SESSION_COOKIE_PATH: None
+  # 在哪个域名下会产生session记录在cookies中
+  #SESSION_COOKIE_DOMAIN: None
+  # 缓存控制的最大期限, 单位：hour，默认12小时
+  #SEND_FILE_MAX_AGE_DEFAULT: 12
+  # 如果设置为字节数， Flask 会拒绝内容长度大于此值的请求进入，并返回一个 413 状态码
+  #MAX_CONTENT_LENGTH: None
+  # 如果这个值被设置为 True ，Flask不会执行 HTTP 异常的错误处理，而是像对待其它异常一样
+  # 通过异常栈让它冒泡地抛出。这对于需要找出 HTTP 异常源头的可怕调试情形是有用的。
+  #TRAP_BAD_REQUEST_ERRORS: False
+  # Werkzeug 处理请求中的特定数据的内部数据结构会抛出同样也是“错误的请求”异常的特殊的 key errors 。
+  # 同样地，为了保持一致，许多操作可以显式地抛出 BadRequest 异常。
+  # 因为在调试中，你希望准确地找出异常的原因，这个设置用于在这些情形下调试。
+  #TRAP_HTTP_EXCEPTIONS: False
+  # 生成URL的时候如果没有可用的 URL 模式话将使用这个值
+  #PREFERRED_URL_SCHEME: "https"
+  # 是否弃用 x_sendfile
+  #USE_X_SENDFILE: False
+  # 模板自动重新加载
+  # TEMPLATES_AUTO_RELOAD: None
+  # Auth认证token的有效时长，单位秒
+  #TOKEN_EXP: 3600

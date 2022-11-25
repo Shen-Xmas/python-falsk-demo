@@ -1,0 +1,13 @@
+Flask==1.1.2
+redis==3.5.3
+PyYAML==5.3.1
+gevent==20.9.0
+PyMySQL==0.10.1
+gunicorn==20.0.4
+Flask-Cors==3.0.9
+Flask-Session==0.3.2
+Flask-Migrate==2.5.3
+Flask-Script==2.0.6
+Flask-RESTful==0.3.8
+pywin32==228; sys_platform != 'linux'
+requests==2.24.0

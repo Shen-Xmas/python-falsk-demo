@@ -1,0 +1,61 @@
+development:
+  db:
+    type: mysql
+    driver: pymysql
+    host:
+    port: 3306
+    database:
+    username:
+    password:
+  redis_auth:
+    host:
+    port: 6379
+    password:
+    flask_session_schema: 1
+  redis_cache:
+    host:
+    port: 6379
+    password:
+    cache_model_schema: 0
+    cache_instance_schema: 1
+  rabbitmq:
+    host:
+    username:
+    password:
+    port: 5672
+    virtual_host:
+    pool_size: 8
+    pool_recycle: 600
+    queue:
+
+
+production:
+  db:
+    type: mysql
+    driver: pymysql
+    host:
+    port: 3306
+    database:
+    username:
+    password:
+  redis_auth:
+    host:
+    port: 6379
+    password:
+    flask_session_schema: 1
+    cmdb_token_schema: 2
+  redis_cache:
+    host:
+    port: 6379
+    password:
+    cache_model_schema: 0
+    cache_instance_schema: 1
+  rabbitmq:
+    host:
+    username:
+    password:
+    port: 5672
+    virtual_host:
+    pool_size: 8
+    pool_recycle: 600
+    queue:
